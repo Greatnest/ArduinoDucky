@@ -39,7 +39,7 @@ Press key
 
 Example
 
-    keyPress(LEFT_GUI, 0x15); // Press R Key
+    keyPress(0, 0x15); // Press R Key
 
 Press Multiple key
 
