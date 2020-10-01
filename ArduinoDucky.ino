@@ -1,20 +1,20 @@
 /* BADUSB code by sPkSoft For arduino UNO */
 
 //Modifier Keys
-#define LEFT_CTRL 0x01
-#define LEFT_SHIFT 0x02
-#define LEFT_ALT 0x04
-#define LEFT_GUI 0x08
-#define RIGHT_CTRL 0x10
-#define RIGHT_SHIFT 0x20
-#define RIGHT_ALT 0x40
-#define RIGHT_GUI 0x80
+#define LEFT_CTRL 1
+#define LEFT_SHIFT 2
+#define LEFT_ALT 4
+#define LEFT_GUI 8
+#define RIGHT_CTRL 16
+#define RIGHT_SHIFT 32
+#define RIGHT_ALT 64
+#define RIGHT_GUI 128
 
 //Keys
-#define KEY_ENTER 0x28
-#define KEY_BACKSPEACE 0x2A
-#define KEY_TAB 0x2B
-#define KEY_CAPSLOCK 0x39
+#define KEY_ENTER 40
+#define KEY_BACKSPEACE 42
+#define KEY_TAB 43
+#define KEY_CAPSLOCK 57
 
 uint8_t buf[8] = {0};  //buffer
 
